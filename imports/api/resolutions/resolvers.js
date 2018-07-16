@@ -14,12 +14,13 @@ export default {
     }
   },
 
+  // {name} is destrutioning of the args object
   Mutation: {
-    createResolution() {
-      console.log('got here');
-      /* const resolutionId = Resolutions.insert({
-        name: 'Test Res'
-      }); */
+    createResolution(obj, { name }, context) {
+      const resolutionId = Resolutions.insert({
+        name: name // can be shortened to name in this case
+      });
+      return Resolutions.findOne(resolutionId);
     }
   }
 };

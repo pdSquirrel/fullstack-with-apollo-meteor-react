@@ -14,7 +14,7 @@ const testSchema = `
 
 const typeDefs = [testSchema, ResolutionsSchema];
 
-//buxfix comment for importing changes in schema
+// bugfix comment for importing changes in schema
 
 const testResolvers = {
   Query: {
